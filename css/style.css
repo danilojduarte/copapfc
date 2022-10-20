@@ -15,7 +15,7 @@
     --extra-color2: hsl(203, 68%, 45%);
     --extra-color3: hsl(203, 39%, 25%);
 
-    --nav-height:7.2rem;
+    --nav-height:5.2rem;
 }
 
 body {
@@ -40,13 +40,17 @@ header::before {
     content: "";
     width: 100vw;
     height: calc(90rem + var(--nav-height));
-    background-color: azure;
+    background-color: hsl(580, 90%, 89%);
     display: block;
 
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
+}
+
+.logo {
+    color: #fff;
 }
 
 header h1 {
@@ -76,7 +80,7 @@ header p {
 }
 
 header button {
-    background: var(--principal-color);
+    background: var(--extra-color3);
     color: #fff;
     text-transform: uppercase;
     font-size: 1.4rem;
@@ -140,9 +144,7 @@ header img {
 /* =======NAVIGATION======== */
 nav {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-
+    
     height: var(--nav-height);
     
 
@@ -150,4 +152,18 @@ nav {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+}
+nav a {
+    text-decoration: none;
+}
+
+nav .box-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav.scroll {
+    background: var(--color-text);
+    width: 100vw;
 }
